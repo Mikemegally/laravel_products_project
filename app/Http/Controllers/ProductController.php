@@ -76,6 +76,7 @@ class ProductController extends Controller
         $product = Product::where('id',$id)->first();
         $product->update($request->all());
         return redirect('products/'.$product->id)->with('success','product updated');
+//        return to the show page
     }
 
     /**
